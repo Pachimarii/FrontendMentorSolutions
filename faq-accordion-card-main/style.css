@@ -1,0 +1,137 @@
+body {
+    background-image: linear-gradient(180deg, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    height: fit-content;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 14px;
+    color: hsl(238, 29%, 16%);
+    display: flex;
+}
+
+.content {
+    width: 920px;
+    min-height: 509px;
+    background-color: white;
+    border-radius: 23px;
+    margin: calc((100vh - 509px) / 2) auto;
+    display: flex;
+}
+
+/* =========== left part (decordations) =========== */
+.part1 {
+    width: 50%;
+   
+    position: relative;
+}
+
+.part1 div{
+    position: absolute;
+    overflow: hidden;
+    background-image: url(./images/bg-pattern-desktop.svg);
+    background-position: 99.8% 68%;
+    width: 397px;
+    height: 100%;
+}
+ 
+.woman_online {
+    position: absolute;
+    top: 75px;
+    right: 5px;
+}
+
+.box {
+    position: absolute;
+    top: 200px;
+    /* bottom: 245px; */
+    right: 297px;
+}
+
+/* =========== right part (decordations) =========== */
+.part2 {
+    width: 50%;
+    height: calc(100% - ( 2 * 65px));
+    margin: 65px;
+}
+
+.title {
+    color: hsl(238, 29%, 16%);
+    font-size: 32px;
+    font-weight: 700;
+}
+
+hr {
+    border: none;
+    background-color: hsl(240, 5%, 91%);
+    color: hsl(240, 5%, 91%);
+    height: .3px;
+}
+
+.faq_sets {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 80%;
+    width: 90%;
+}
+
+/* ====== faq set ===== */
+.set_wrapper {
+    border-bottom: hsl(240, 5%, 91%) solid .3px;
+}
+
+.faq_set {
+    margin: 12px 0; 
+}
+
+.question {
+    cursor: pointer;
+    outline: none;
+}
+
+.question::after {
+    content: url(./images/icon-arrow-down.svg);
+    float: right;
+}
+
+.question:hover {
+    color: hsl(14, 88%, 65%);
+}
+
+.faq_set[open] .question {
+    font-weight: 700;
+}
+
+.faq_set[open] .question::after{
+    transform: rotate(180deg);
+}
+
+.faq_set[open] .question:hover {
+    color: hsl(238, 29%, 16%);
+}
+
+.faq_set .question::-webkit-details-marker {
+    display: none;
+}
+
+.faq_set p {
+    margin: 15px 0;
+    font-size: 12px;
+    color: #787887;
+    letter-spacing: .5px;
+    line-height: 17px;
+}
+
+
+/* ========== attribution ========== */
+.attribution {
+    width: 100%;
+    padding: 10px 0;
+    text-align:center;
+    position: fixed;
+    top: calc(100vh - 30px);
+    background-color: rgba(240, 248, 255, 0.158);
+    color: hsl(226, 21%, 33%);
+}
+
+.attribution a {
+    color:rgb(208, 207, 236);
+}
