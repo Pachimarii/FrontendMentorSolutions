@@ -63,8 +63,7 @@ body {
     height: 100%;
 }
 
-.part1 div::after {
-    content: url(./images/illustration-woman-online-desktop.svg);
+.part1 div img {
     position: absolute;
     top: 4.7rem;
     right: 0.3rem;
@@ -74,30 +73,68 @@ body {
     position: absolute;
     top: 12.5rem;
     right: 18.6rem;
+    animation: floating-wide 3s infinite;
+}
+
+@keyframes floating-wide {
+    0% {
+        filter: drop-shadow(0 15px 15px rgba(0, 0, 0, 0.3));
+        transform: translate(0);
+    }
+
+    50% {
+        filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
+        transform: translateY(-1rem);
+    }
+
+    100% {
+        filter: drop-shadow(0 15px 15px rgba(0, 0, 0, 0.3));
+        transform: translate(0);
+    }
 }
 
 @media only screen and (max-width: 63.125rem) {
     .part1 {
-        width: 0;
+        width: 14.875rem;
         height: 0;
     }
 
     .part1 div{
         position: relative;
         overflow: visible;
-        width: 0;
+        width: 14.875rem;
         height: 1rem;
     }
 
-    .part1 div::after {
-        content: url(./images/illustration-woman-online-mobile.svg);
+    .part1 div img {
+        width: 100%;
+        height: auto;
         margin-top: -11.4rem;
-        left: -9.1rem;
-        /* right: 2.5rem; */
+        left: 0rem;
     }
 
     .box {
-        display: none;
+        width: 5rem;
+        top: -2.5rem;
+        right: 10rem;
+        animation: floating-narrow 3s infinite;
+    }
+
+    @keyframes floating-narrow {
+        0% {
+            filter: drop-shadow(0 15px 15px rgba(0, 0, 0, 0.3));
+            transform: translate(0);
+        }
+    
+        50% {
+            filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
+            transform: translateY(-0.5rem);
+        }
+    
+        100% {
+            filter: drop-shadow(0 15px 15px rgba(0, 0, 0, 0.3));
+            transform: translate(0);
+        }
     }
 }
 
@@ -199,6 +236,7 @@ hr {
 
 /* ========== attribution ========== */
 .attribution {
+    font-size: 0.6875px;
     width: 100vw;
     padding: 0.625rem 0;
     text-align: center;
