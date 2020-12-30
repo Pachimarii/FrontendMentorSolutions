@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    --very_Dark_grayish_blue: hsl(217, 19%, 35%);
+    --desaturated_dark_blue: hsl(214, 17%, 51%);
+    --grayish_blue: hsl(212, 23%, 69%);
+    --light_grayish_blue: hsl(210, 46%, 95%);
+    --title_text_size: 1.25rem;
+    --normal_text_size: 0.8125rem;
+
+    box-sizing: border-box;
+    background: var(--light_grayish_blue);
+    font-family: 'Manrope', sans-serif;
+    font-size: var(--normal_text_size);
+    color: var(--desaturated_dark_blue);
+    
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+*,::before,::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+.card {
+    display: flex;
+    margin: calc((100vh - 17.5rem - 3rem) / 2) auto;
+    background: white;
+    width: 45.625rem;
+    height: 17.5rem;
+    border-radius: 0.625rem;
+}
+
+/* ========== img section ========== */
+.img_section {
+    border-bottom-left-radius: 0.625rem;
+    border-top-left-radius: 0.625rem;
+    width: 17.8125rem;
+    overflow: hidden;
+}
+
+.img_container {
+    height: 17.5rem;
+}
+
+.img_container img{
+    width: auto;
+    height: 100%;
+}
+
+/* ========== text section ========== */
+.text_section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: calc(45.625rem - 17.8125rem);
+    padding: 2.5rem;
+}
+
+.title {
+    font-size: var(--title_text_size);
+    font-weight: 700;
+    color: var(--very_Dark_grayish_blue);
+    padding-bottom: 0.5rem;
+}
+
+/* ===== minor text section ===== */
+.minor_text {
+    height: 2.5rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.avatar {
+    height: 2.5rem;
+    width: 2.5rem;
+    margin-right: 1rem;
+    border-radius: 2.5rem;
+    overflow: hidden;
+}
+
+.avatar img {
+    width: 100%;
+}
+
+.author {
+    font-weight: 700;
+    color: var(--very_Dark_grayish_blue);
+    padding-bottom: 0.2rem;
+}
+/* ========== attribution ========== */
+.attribution {
+    font-size: 0.6875px;
+    width: 100vw;
+    padding: 0.625rem 0;
+    text-align: center;
+    background-color: rgba(153, 153, 153, 0.185);
+    color: hsl(0, 0%, 60%);
+}
+
+.attribution a {
+    font-weight: 700;
+    color:rgb(133, 132, 132);
+}
