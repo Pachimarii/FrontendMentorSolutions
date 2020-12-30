@@ -1,55 +1,111 @@
 body {
     background-image: linear-gradient(180deg, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
-    height: fit-content;
+    min-height: fit-content;
+    /* height: min-content; */
     font-family: 'Kumbh Sans', sans-serif;
-    font-size: 14px;
+    font-size: 0.875rem;
     color: hsl(238, 29%, 16%);
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }
 
 .content {
-    width: 920px;
-    min-height: 509px;
-    background-color: white;
-    border-radius: 23px;
-    margin: calc((100vh - 509px) / 2) auto;
+    width: 57.5rem;
+    min-height: 31.8rem;
+    margin: calc((100vh - 31.8rem) / 2 - 1rem) auto;
     display: flex;
+    justify-content: center;
+    flex-direction: row;
+    background-color: white;
+    border-radius: 1.43rem;
+    box-shadow: hsla(240, 39%, 43%, 0.815) 0.2rem 0.2rem 2rem;
+    background-image: url(./images/bg-pattern-desktop.svg);
+    background-position: -36rem -18.75rem;
+    background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 63.125rem) {
+    body {
+        font-size: 0.8125rem;
+    }
+
+    .content {
+        min-height: 33.44rem;
+        margin: 9rem auto calc(100vh - 9rem - 33.44rem - 2rem);
+        width: 20.4rem;
+        flex-direction: column;
+        justify-content: flex-start;
+        background-position: 50% 0;
+        background-image: url(./images/bg-pattern-mobile.svg);
+        align-items: center;
+    }
 }
 
 /* =========== left part (decordations) =========== */
 .part1 {
     width: 50%;
-   
     position: relative;
 }
 
 .part1 div{
     position: absolute;
     overflow: hidden;
-    background-image: url(./images/bg-pattern-desktop.svg);
-    background-position: 99.8% 68%;
-    width: 397px;
+    width: 24.8rem;
     height: 100%;
 }
- 
-.woman_online {
+
+.part1 div::after {
+    content: url(./images/illustration-woman-online-desktop.svg);
     position: absolute;
-    top: 75px;
-    right: 5px;
+    top: 4.7rem;
+    right: 0.3rem;
 }
 
 .box {
     position: absolute;
-    top: 200px;
-    /* bottom: 245px; */
-    right: 297px;
+    top: 12.5rem;
+    right: 18.6rem;
+}
+
+@media only screen and (max-width: 63.125rem) {
+    .part1 {
+        width: 0;
+        height: 0;
+    }
+
+    .part1 div{
+        position: relative;
+        overflow: visible;
+        width: 0;
+        height: 1rem;
+    }
+
+    .part1 div::after {
+        content: url(./images/illustration-woman-online-mobile.svg);
+        margin-top: -11.4rem;
+        left: -9.1rem;
+        /* right: 2.5rem; */
+    }
+
+    .box {
+        display: none;
+    }
 }
 
 /* =========== right part (decordations) =========== */
 .part2 {
     width: 50%;
-    height: calc(100% - ( 2 * 65px));
-    margin: 65px;
+    height: calc(100% - ( 2 * 4rem));
+    margin: 4rem;
 }
 
 .title {
@@ -69,17 +125,32 @@ hr {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    align-content: center;
     height: 80%;
     width: 90%;
 }
 
+@media only screen and (max-width: 63.125rem) {
+    .part2 {
+        width: calc(100% - (2*1.5rem));
+        margin: 7rem auto 1.5rem;
+    }
+
+    .title {
+        text-align: center;
+    }
+    
+    .faq_sets {
+        width: 100%;
+    }
+}
 /* ====== faq set ===== */
 .set_wrapper {
-    border-bottom: hsl(240, 5%, 91%) solid .3px;
+    border-bottom: hsl(240, 5%, 91%) solid 0.002rem;
 }
 
 .faq_set {
-    margin: 12px 0; 
+    margin: 0.75rem 0; 
 }
 
 .question {
@@ -113,25 +184,28 @@ hr {
 }
 
 .faq_set p {
-    margin: 15px 0;
-    font-size: 12px;
+    margin: 0.93rem 0;
+    font-size: 0.75rem;
     color: #787887;
-    letter-spacing: .5px;
-    line-height: 17px;
+    letter-spacing: 0.03rem;
+    line-height: 1.06rem;
 }
 
+@media only screen and (max-width: 63.125rem) {
+    .faq_set {
+        margin: 1rem 0;
+    }
+}
 
 /* ========== attribution ========== */
 .attribution {
-    width: 100%;
-    padding: 10px 0;
-    text-align:center;
-    position: fixed;
-    top: calc(100vh - 30px);
-    background-color: rgba(240, 248, 255, 0.158);
-    color: hsl(226, 21%, 33%);
+    width: 100vw;
+    padding: 0.625rem 0;
+    text-align: center;
+    background-color: rgba(33, 40, 107, 0.877);
+    color: hsl(220, 3%, 82%);
 }
 
 .attribution a {
-    color:rgb(208, 207, 236);
+    color:rgb(255, 40, 255);
 }
