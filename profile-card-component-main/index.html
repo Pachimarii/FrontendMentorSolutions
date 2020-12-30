@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- external css stylesheet -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Profile card component | Minhui's Solution</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class = "ptn bgptn1"><img src="images/bg-pattern-top.svg"></div>
+  <div class = "ptn bgptn2"><img src="images/bg-pattern-bottom.svg"></div>
+  <div class = "card_body adjustable_card_width">
+    <!-- [upper] card pattern -->
+    <div class = "upper"></div>
+    <!-- avatar -->
+    <div class = "avatar"> <img src = "./images/image-victor.jpg"> </div>
+    <!-- [middle] user name, age & location -->
+    <div class = "middle">
+      <div class = "row1">
+        <span class = "username bold"> Victor Crest </span> 26 
+      </div>
+      <div class = "row2">
+        London
+      </div>
+    </div>
+    
+    <!-- [lower] Data display -->
+    <div class = "lower">
+      <div class="item">
+        <div class="data bold">80K</div>
+        <div class="item_name">Followers</div>
+      </div>
+      <div class="item">
+        <div class="data bold">803K</div>
+        <div class="item_name">Likes</div>
+      </div>
+      <div class="item">
+        <div class="data bold">1.4K</div>
+        <div class="item_name">Photos</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== attribution ========== -->
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Minhui Xie</a>.
+  </div>
+
+</body>
+</html>

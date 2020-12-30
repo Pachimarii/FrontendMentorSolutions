@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(185, 75%, 39%);
+    color: hsl(227, 10%, 46%);
+    height: 100vh;
+}
+
+/* ========== background patterns =========== */
+.ptn {
+    position: fixed;
+    z-index: -1;
+}
+
+.bgptn1 {
+    bottom: 45vh;
+    right: 50vw; 
+}
+
+.bgptn2 {
+    top: 45vh;
+    left: 50vw; 
+}
+
+
+/* =========== card ========== */
+.card_body {
+    height: 374px;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.adjustable_card_width {
+    width: 350px;
+}
+
+@media only screen and (max-width: 768px) {
+    .adjustable_card_width {
+        width: 326px;
+    }
+}
+
+/* ===== card pattern ===== */
+.upper {
+    background-image: url("./images/bg-pattern-card.svg");
+    border-radius: 15px 15px 0px 0px;
+    width: 100%;
+    height: 35%;
+}
+
+
+/* ===== Avatar ===== */
+.avatar {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    position: relative;
+    bottom: 50px;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    border-style: solid;
+    border-radius: 50%;
+    border-width: 5px;
+    border-color: white;
+}
+
+/* ===== middle text area ===== */
+.middle {
+    width: fit-content;
+    position: relative;
+    bottom: 15px;
+    margin: auto;
+    padding-bottom: 10px;
+
+}
+
+.row1 {
+   width: fit-content;
+   padding-bottom: 10px;
+}
+
+.username {
+    padding-right: 5px;
+}
+
+.row2 {
+    font-size: 14px;
+    width: fit-content;
+    margin: auto;
+}
+
+/* ===== Data display ===== */
+
+.lower {
+    border-top: 1px solid hsl(0, 0%, 86%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+    padding: 25px;
+    text-align: center;
+}
+
+.data {
+    padding-bottom: 7px;
+}
+
+.item_name{
+    font-size: 10px;
+}
+
+/* ===== bold text setting ===== */
+.bold {
+    font-size: 18px;
+    font-weight: 700;
+    color: hsl(229, 23%, 23%);
+}
+
+/* ========== attribution ========== */
+.attribution {
+    width: 100%;
+    padding: 10px 0;
+    text-align:center;
+    position: fixed;
+    top: calc(100vh - 30px);
+    background-color: rgba(240, 248, 255, 0.158);
+    color: hsl(226, 21%, 33%);
+}
+
+.attribution a {
+    color:cyan;
+}
+
+
