@@ -3,12 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <!-- stylesheet -->
   <link rel="stylesheet" href="./style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;500;700&display=swap" rel="stylesheet">
 
   <title>Frontend Mentor | Article preview component</title>
 
@@ -34,14 +33,29 @@
         </p>
       </div>
       <div class="minor_text">
-        <div class="avatar">
-          <img src="./images/avatar-michelle.jpg">
+        <div class="part1"> 
+          <div class="avatar">
+            <img src="./images/avatar-michelle.jpg">
+          </div>
+  
+          <div class="artical_info">
+            <p class="author">Michelle Appleton</p>
+            <p class="time_stamp">28 Jun 2020</p>
+          </div>
         </div>
 
-        <div class="artical_info">
-          <p class="author">Michelle Appleton</p>
-          <p class="time_stamp">28 Jun 2020</p>
+        <div class="share_wrapper"> 
+          <div class="share"><img src="images/icon-share.svg"></div>
+          <div class="pop_wrapper">
+            <div class="pop_up hiding">
+              <p class="share_text"> share </p>
+              <div class="icon_wrapper"><img src="images/icon-facebook.svg"></div>
+              <div class="icon_wrapper"><img src="./images/icon-twitter.svg"></div>
+              <div class="icon_wrapper"><img src="./images/icon-pinterest.svg"></div>
+            </div>
+          </div>
         </div>
+
       </div>
 
     </article>
@@ -51,8 +65,8 @@
   <!-- ========== attribution ========== -->
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://pachimarii.github.io/">Minhui Xie</a>.
+    Coded by <a href="https://pachimarii.github.io/" target="_blank">Minhui Xie</a>.
   </div>
-
+  <script src="./script.js"></script>
 </body>
 </html>
