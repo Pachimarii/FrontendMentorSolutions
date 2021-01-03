@@ -114,10 +114,10 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-top: 3.5rem;
+        padding-top: 4rem;
         width: 19.8rem;
         background-size: 4rem;
-        background-position: 8rem 1.7rem;
+        background-position: 8.15rem 2.1rem;
     }
 
     .testimonial {
@@ -126,6 +126,7 @@ body {
     }
 
     .source {
+        padding-bottom: 0.5rem;
         display: flex;
         flex-direction: column;
         font-size: 1.125rem;
@@ -174,7 +175,7 @@ body {
     .photo-background {
         width: 20.4375rem;
         left: -0.5rem;
-        top: -1.85rem;
+        top: -1.25rem;
     }
 
     .photo-container {
@@ -183,12 +184,12 @@ body {
 
     .photo {
         width: 15.875rem;
-        top: 0rem;
+        /* top: 0rem; */
     }
 
 }
 
-/* ===== btns ====== */
+/* ===== buttons ====== */
 
 .btn {
     width: 3.5rem;
@@ -224,8 +225,8 @@ body {
     .btn{
         width: 2.5rem;
         height: 2.5rem;
-        left: 7.4rem;
-        top: 14.6rem;
+        left: 7.2rem;
+        top: 15.2rem;
     }
 
     .btn img {
@@ -234,7 +235,7 @@ body {
 
     .right-btn {
         border-radius:  0 1.75rem 1.75rem 0;
-        left: 9.8rem;
+        left: 9.7rem;
     }
 }
 
