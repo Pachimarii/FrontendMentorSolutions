@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Pod request access landing page</title>
+</head>
+<body>
+  <div class="container">
+    <div class="brand"><img class="pod" src="assets/desktop/logo.svg"></div>
+    <section class="major-content">
+      <div class="title">
+        <h1 class="title1">Publish your podcasts </h1>
+        <h1 class="title2">everywhere.</h1>
+      </div>
+      
+      <p class="info">Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify, 
+        Apple Podcasts, Google Podcasts, Pocket Casts and more!</p>
+      <div class="request-container">
+        <form class="input-btn-grp" onsubmit="event.preventDefault()" action="">
+          <input class="input" type="email" placeholder="Email address" required></input>
+          <div class="warning">Oops! Please check you email</div>
+          <button class="btn" type="submit">Request access</button>
+        </form>
+        <div class="icon-grp">
+          <div class="icon-container1"><img class="icon" src="./assets/desktop/spotify.svg" alt=""></div>
+          <div class="icon-container2"><img class="icon" src="./assets/desktop/apple-podcast.svg" alt=""></div>
+          <div class="icon-container3"><img class="icon" src="./assets/desktop/google-podcasts.svg" alt=""></div>
+          <div class="icon-container4"><img class="icon" src="./assets/desktop/pocket-casts.svg" alt=""></div>
+        </div>
+      </div>
+      
+    </section>
+  </div>
+  
+  <!-- ========== attribution ========== -->
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://pachimarii.github.io/" target="_blank">Minhui Xie</a>.
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>
