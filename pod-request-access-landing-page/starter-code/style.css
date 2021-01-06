@@ -65,7 +65,7 @@ body {
 }
 
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 43.74rem) {
     .container {
         padding: 5rem 0 calc(100vh - 5rem - 50.5rem) 2.5rem;
         background-image: url(./assets/tablet/image-host.jpg);
@@ -78,6 +78,28 @@ body {
         width: 8.4375rem;
     }
     
+}
+
+@media only screen and (min-width: 73.125rem) {
+    .container {
+        position: relative;
+        margin: 8.125rem 0 calc(100vh - 6.375rem - 42rem) 10.3125rem;
+        padding:0;
+        background-image: url(./assets/desktop/image-host.jpg);
+    }
+
+    .container::after {
+        content: url("./assets/desktop/bg-pattern-dots.svg");
+        position: absolute;
+        top: 36rem;
+        right: 3rem;
+    }
+
+    .brand {
+        width: 8.4325rem;
+        position: absolute;
+        top: -1.75rem;
+    }
 }
 
 /* ========== major content ========= */
@@ -127,9 +149,9 @@ body {
     text-align: center;
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 43.74rem) {
     .major-content {
-        align-items:flex-start;
+        align-items: flex-start;
         margin-top: 7rem;
         width: 39.6875rem;
         background-color: var(--dark_desaturated_blue);
@@ -153,12 +175,32 @@ body {
         font-size: var(--tablet_title_sz);
     }
 
-    .info{
+    .info {
         width: 27.8125rem;
         padding: 2rem 0 3rem;
         font-size: var(--tablet_paragraph_sz);
         text-align: start;
         line-height: 1.8rem;
+    }
+}
+
+@media only screen and (min-width: 73.125rem) {
+   .major-content {
+       width: 45.1875rem;
+       margin-top: 6.4375rem;
+   }
+
+   .title1 {
+        font-size: var(--desktop_title_sz);
+    }
+
+    .title2 {
+        font-size: var(--desktop_title_sz);
+    }
+
+    .info {
+        padding: 2.1rem 0 3rem;
+        font-size: var(--desktop_paragraph_sz);
     }
 }
 
@@ -198,7 +240,7 @@ body {
     width: 100%;
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 43.74rem) {
     .request-container {
         flex-direction: column;
         align-items: flex-start;
@@ -224,6 +266,10 @@ body {
     .icon-container4 {
         width: 8.0625rem;
     }
+
+}
+
+@media only screen and (min-width: 73.125rem) {
 
 }
 
@@ -287,7 +333,7 @@ body {
 }
 
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 43.74rem) {
     .input-btn-grp {
         position: relative;
         width: 26.6875rem;
@@ -325,7 +371,7 @@ body {
     color:var(--neon_green);
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 43.74rem) {
     .attribution {
         padding: 15rem 0 0.5rem calc((100vw - 16.5rem) / 2);
         background-image: url("./assets/desktop/bg-pattern-dots.svg");
@@ -334,4 +380,11 @@ body {
         background-size: 14.5rem;
     }
 
+}
+
+@media only screen and (min-width: 73.125rem) {
+    .attribution {
+        padding: 0;
+        background-image: none;
+    }
 }
