@@ -46,6 +46,7 @@ body {
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
 }
+
 /* ===== container ===== */
 .container {
     padding: 3rem 0 calc(100vh - 3rem - 29.5rem);
