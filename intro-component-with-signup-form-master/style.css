@@ -172,6 +172,10 @@ body {
     cursor: pointer;
 }
 
+.btn-trial:hover {
+    background-color:  hsl(248, 44%, 58%);
+}
+
 .btn-trial-text {
     width: 19.4rem;
 }
@@ -293,6 +297,10 @@ input[type='text']:focus {
     letter-spacing: 0.1rem;
     font-weight: 600;
     cursor: pointer;
+}
+
+.btn:hover {
+    background-color:  hsl(154, 59%, 65%);
 }
 
 .form-footer {
