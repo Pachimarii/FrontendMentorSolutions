@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
+
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"/>
+       
+        <!-- stylesheet -->
+        <link rel="stylesheet" href="style.css">
+        <!-- import icons from font awesome -->
+        <script src="https://kit.fontawesome.com/d494f7bb71.js" crossorigin="anonymous"></script>
+
+        <title>Frontend Mentor | Ping coming soon page</title>
+
+    </head>
+    <body>
+        <div class="part1">
+            <div class="top-container">
+                <img class="ping-logo" src="./images/logo.svg" alt="ping-logo" />
+                <h3 class="title light light-grey">We are launching <span class="bold black">soon!</span></h1>
+                <p class="sub-text-input">Subscribe and get notified</p>
+                
+                <form class="form" onsubmit="event.preventDefault()" action="">
+                    <input class="sub-text-input input" aria-label="email" type="email" name="email" id="mail" placeholder="Your email address..." />
+                    <p class="warning"> Please provide a valid email addres</p>
+                    <input class="sub-text-input btn" type="submit" value="Notify Me" />
+                </form>
+                
+                <div class="illustration-container">
+                    <img class="illustration" src="images/illustration-dashboard.png">
+                </div>
+            </div>  
+            
+            
+            <div class="bottom-container">
+                <a href="#" class="icon-border" aria-label="facebook link">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="icon-border" aria-label="twitter link">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="icon-border" aria-label="instagram link">
+                    <i class="fab fa-instagram"></i>
+                </a> 
+            </div>
+        </div>
+        
+        <div class="part2">
+            <footer class="footer copyright">
+                &copy; Copyright Ping. All rights reserved.
+            </footer>
+    
+            <!-- ========== attribution ========== -->
+            <div class="attribution footer">
+                Challenge by <a class="attribution-link" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+                Coded by <a class="attribution-link" href="https://pachimarii.github.io/" target="_blank">Minhui Xie</a>.
+            </div>
+        </div>
+       
+        <script src="script.js"></script>
+    </body>
+</html>

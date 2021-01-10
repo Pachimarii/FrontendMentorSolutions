@@ -50,14 +50,13 @@ body {
     background-image: url(./images/bg-mobile.svg);
     background-color: var(--preset-violet);
     background-repeat: no-repeat;
-    /* background-position: top center; */
     background-size: 36rem auto;
-    
 
     min-width: 36rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-x: hidden;
 
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */

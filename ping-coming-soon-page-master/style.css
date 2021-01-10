@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+:root {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: 'Libre Franklin', sans-serif;
+
+    /* -- mobile preset data --*/
+    --mobile-title-sz: 2.2rem;
+    --mobile-title-line-height: 3.2rem;
+
+    --mobile-sub-text-input-sz: 1.2rem;
+    --mobile-sub-text-input-line-height: 1.5rem;
+
+    --mobile-footer-sz: 1rem;
+    --mobile-footer-line-height: 1.2rem;
+
+    /* -- mobile preset data --*/
+    --desktop-title-sz: 4.8rem;
+    --desktop-title-line-height: 6rem;
+
+    --desktop-sub-text-input-sz: 1.6rem;
+    --desktop-sub-text-input-line-height: 2.4rem;
+
+    --desktop-footer-sz: 1.2rem;
+    --desktop-footer-line-height: 1.5rem;
+
+    /* -- color pallet -- */
+    --preset-blue: hsl(223, 87%, 63%);
+    --preset-pale-blue: hsl(223, 100%, 88%);
+    --preset-red: hsl(354, 100%, 66%);
+    --preset-light-gray: hsl(0, 0%, 59%);
+    --preset-dark-blue: hsl(209, 33%, 12%);
+
+    
+}
+
+*,
+::before,
+::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    min-width: 34rem;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    
+}
+
+.part1, .part2, .top-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.part1 {
+    height: 90vh;
+    width: calc(28rem + 20vw);
+    min-height: 85rem;
+    justify-content: space-between;
+}
+
+.part2 {
+    height: 10vh;
+    justify-content: center;
+}
+
+
+/*  ----- text specifications ----- */
+.light {
+    font-weight: 300;
+}
+
+.semi-bold {
+    font-weight: 600;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.light-grey {
+    color: var(--preset-light-gray);
+}
+
+.black {
+    color: black;
+}
+
+/* ========== top container ========== */
+
+.ping-logo {
+    width: calc(4.289rem + 3.5vw);
+    margin: 8.1rem 0 0;
+}
+
+.title {
+    margin: 3rem 0 1rem 0;
+    font-size: calc(1.931rem + 0.5vw);
+    line-height: var(--mobile-title-line-height);
+}
+
+.sub-text-input {
+    font-size: calc(1rem + 0.3vw);
+    line-height: var(--mobile-sub-text-input-line-height);
+}
+
+.footer {
+    font-size: var(--mobile-footer-sz);
+    line-height: var(--mobile-footer-line-height);
+    color: var(--preset-light-gray);
+}
+
+@media only screen and (min-width: 75rem) {
+    .ping-logo {
+        width: calc(7.456rem + 1vw);
+        margin: 8rem 0 0;
+    }
+
+    .title {
+        margin: 3rem 0 2rem 0;
+        font-size: calc(3.356rem + 1vw);
+        line-height: var(--desktop-title-line-height);
+    }
+
+    
+    .sub-text-input {
+        font-size: calc(1.278rem + 0.5vw);
+        line-height: var(--desktop-sub-text-input-line-height);
+
+    }
+
+    .footer {
+        font-size: calc(0.5rem + 0.5vw);
+        line-height: var(--desktop-footer-line-height);
+    }
+
+}
+
+/*  ---- form content (input + btn) ----- */
+.form {
+    width: calc(23.866rem + 5vw);
+    display: flex;
+    flex-direction: column;
+}
+
+.input[type='email'] {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: calc(1rem + 0.3vw);
+    width: inherit;
+    height: 4.1rem;
+    border-radius: 2.8rem;
+    outline: none;
+    border: solid 2px var(--preset-pale-blue);
+    padding: 0 0 0 3rem;
+    margin: 3rem 0 0;
+    
+}
+
+.input::placeholder {
+    color: var(--preset-pale-blue);
+}
+
+.btn {
+    width: inherit;
+    height: 4rem;
+    border:none;
+    border-radius: 2.8rem;
+    outline: none;
+    background-color: var(--preset-blue);
+    color: white;
+    font-weight: 700;
+    box-shadow: 0 0.5rem 1rem 0.2rem hsla(223, 87%, 63%, 0.2);
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color:  hsla(223, 87%, 63%, 0.8);
+}
+
+.warning {
+    width: inherit;
+    height: 1rem;
+    text-align: center;
+    font-size: calc(1rem + 0.3vw);
+    line-height: var(--mobile-sub-text-input-line-height);
+    color: red;
+    opacity: 0;
+    transition: ease 0.3s;
+}
+
+.input:invalid:not(:focus-visible):not(:placeholder-shown) {
+    border-color: var(--preset-red);
+}
+
+.input:invalid:not(:focus-visible):not(:placeholder-shown)+.warning {
+    height: initial;
+    opacity: 1;
+    margin: 0.5rem 0 2.3rem;
+    transition: ease 0.3s;
+}
+
+@media only screen and (min-width: 75rem) {
+    .form {
+        width: calc(60.82rem + 2vw);
+        height: calc(4.881rem + 0.5vw + 4.8rem);
+        position: relative;
+        margin: 3rem 0 5rem;
+    }
+
+    .input[type='email']{
+        font-size: calc(1.278rem + 0.5vw);
+        width: calc(39.92rem + 2vw);
+        height: calc(4.881rem + 0.5vw);
+        margin:0;
+    }
+
+    .btn {
+        font-size: calc(1.278rem + 0.5vw);
+        position: absolute;
+        width: calc(60.82rem - 39.92rem - 1.5rem);
+        height: calc(4.881rem + 0.5vw);
+        right: 0;
+    }
+
+    .warning {
+        font-size: calc(0.7rem + 0.3vw);
+        padding-left: 3rem;
+        text-align: start;
+        height: 0;
+    }
+    
+    .input:invalid:not(:focus-visible):not(:placeholder-shown)+.warning {   
+        margin: 1rem 0 2.3rem;  
+    }
+}
+/* ===== illustration ===== */
+.illustration-container {
+    margin: 4rem 0 0;
+    width: calc(30rem + 6vw);
+}
+
+.illustration {
+    width: 100%;
+}
+
+@media only screen and (min-width: 75rem) {
+    .illustration-container {
+        /* margin: 1rem; */
+        margin: 0;
+        width: calc(59.68rem + 3vw);
+    }
+}
+/* ========= bottom container ========== */
+.bottom-container {
+    display: flex;
+}
+
+.icon-border {
+    width: 3.1rem;
+    height: 3.1rem;
+    border: solid 2px rgba(128, 128, 128, 0.2);
+    border-radius: 3.1rem;
+    display: flex;
+    margin: 0 calc(0.5rem + 1vw);
+    align-items: center;
+    justify-content: center;
+    color: var(--preset-blue);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.icon-border:hover {
+    background-color: var(--preset-blue);
+    color: white;
+}
+
+/* ===== attribution ===== */
+
+.attribution {
+    margin: 1vh 0 1rem;
+}
+
+.copyright {
+    margin-top: 2rem;
+}
+
+
+.attribution-link {
+    color: var(--preset-blue);
+    font-weight: 600;
+}
+
