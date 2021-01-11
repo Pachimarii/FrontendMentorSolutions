@@ -15,7 +15,7 @@
     --mobile-footer-sz: 1rem;
     --mobile-footer-line-height: 1.2rem;
 
-    /* -- mobile preset data --*/
+    /* -- desktop preset data --*/
     --desktop-title-sz: 4.8rem;
     --desktop-title-line-height: 6rem;
 
@@ -53,6 +53,13 @@ body {
     align-items: center;
     justify-content: flex-start;
     
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }
 
 .part1, .part2, .top-container{

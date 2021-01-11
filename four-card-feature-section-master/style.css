@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
+
+    /* -- mobile preset data --*/
+    --mobile-title-sz: 2.4rem;
+    --mobile-title-line-height: 3.6rem;
+    --mobile-title-letter-space:0.0167rem;
+
+    --mobile-sub-text-sz: 1.5rem;
+    --mobile-sub-text-line-height: 2.5rem;
+    --mobile-sub-text-letter-space:0.0104rem;
+ 
+    /* -- desktop preset data --*/
+    --desktop-title-sz: 3.6rem;
+    --desktop-title-line-height: 5.4rem;
+    --desktop-title-letter-space:0.025rem;
+
+    --desktop-sub-text-sz: 1.5rem;
+    --desktop-sub-text-line-height: 2.5rem;
+    --desktop-sub-text-letter-space:0.0104rem;
+
+    /* -- fixed settings -- */
+    --card-ttl-sz: 2rem;
+    --card-ttl-line-height: 3rem;
+    --card-ttl-letter-space: 0rem;
+
+    --card-txt-sz: 1.3rem;
+    --card-txt-line-height: 2.3rem;
+    --card-txt-letter-space: 0.009rem;
+
+    /* -- color pallet -- */
+    --preset-red: hsl(0, 78%, 62%);
+    --preset-cyan: hsl(180, 62%, 55%);
+    --preset-orange: hsl(34, 97%, 64%);
+    --preset-blue: hsl(212, 86%, 64%);
+    --preset-very-dark-blue: hsl(234, 12%, 34%);
+    --preset-grayish-blue: hsl(229, 6%, 66%);
+    --preset-very-light-gray: hsl(0, 0%, 98%);
+    
+}
+
+*,
+::before,
+::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    min-width: 34rem;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow-x: hidden;
+
+    background-color: var(--preset-very-light-gray);
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.container {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+@media only screen and (min-width: 75rem) {
+    .container{
+        min-height: 90rem;
+    }
+}
+/* -- general text settings -- */
+.bold {
+    font-weight: 600;
+}
+
+.light {
+    font-weight: 200;
+}
+
+
+/* ===== text ===== */
+.texts {
+    width: calc(27.35rem + 10vw);
+    text-align: center;
+    padding: 8.5rem 0 5rem;
+}
+
+.title {
+    font-size: var(--mobile-title-sz);
+    line-height: var(--mobile-title-line-height);
+    letter-spacing: var(--mobile-title-letter-space);
+    color: var(--preset-very-dark-blue);
+}
+
+.sub-text {
+    padding-top: calc(1rem + 0.2vh);
+    color: var(--preset-grayish-blue);
+    font-size: var(--mobile-sub-text-sz);
+    line-height: var(--mobile-sub-text-line-height);
+    letter-spacing: var(--mobile-sub-text-letter-space);
+}
+
+@media only screen and (min-width: 75rem) {
+    .texts {
+        width: calc(47.961rem + 5vw);
+        text-align: center;
+        padding: 8rem 0 5rem;
+    }
+    
+    .title {
+        font-size: var(--desktop-title-sz);
+        line-height: var(--desktop-title-line-height);
+        letter-spacing: var(--desktop-title-letter-space);
+    }
+    
+    .sub-text {
+        font-size: var(--desktop-sub-text-sz);
+        line-height: var(--desktop-sub-text-line-height);
+        letter-spacing: var(--desktop-sub-text-letter-space);
+    }
+}
+
+/* ===== cards ===== */
+
+.cards {
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    width: calc(27.35rem + 10vw);
+    height: 22.2rem;
+    padding: 3rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 0.2rem 0.4rem rgba(128, 128, 128, 0.5) ;
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+    margin: 2rem 0 0;
+}
+
+.column {
+    height: fit-content;
+}
+
+.border-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: 0.5rem;
+}
+
+/* -- top border colors -- */
+.blue {
+    background-color: var(--preset-blue);
+}
+
+.cyan {
+    background-color: var(--preset-cyan);
+}
+
+.red {
+    background-color: var(--preset-red);
+}
+
+.orange {
+    background-color: var(--preset-orange);
+}
+
+.card-ttl {
+    font-size: var(--card-ttl-sz);
+    line-height: var(--card-ttl-line-height);
+    letter-spacing: var(--card-ttl-letter-space);
+}
+
+.card-txt {
+    font-size: var(--card-txt-sz);
+    line-height: var(--card-txt-line-height);
+    letter-spacing: var(--card-txt-letter-space);
+}
+
+.card-img {
+    position: absolute;
+    bottom: 3rem;
+    right: 3rem;
+}
+
+@media only screen and (min-width: 75rem) {
+    .cards {
+        width: 80vw;
+        height: 50vh;
+        min-height: 50rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .column {
+        width: fit-content;
+        margin: 0 1vw;
+    }
+
+    .card {
+        width: 35rem;
+        height: 25rem;
+        margin: calc(1rem + 1vh) 0 0;
+    }
+}
+
+/* ===== attribution ===== */
+
+.attribution {
+    width: 100vw;
+    text-align: center;
+    color: var(--preset-very-dark-blue);
+    padding: 2rem 0 0.5rem;
+}
+
+.attribution-link {
+    color: var(--preset-blue);
+    font-weight: 600;
+}
