@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;400;700&display=swap');
+
+:root {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: 'Karla', sans-serif;
+
+    /* -- color pallet -- */
+    --preset-cyan: hsl(179, 62%, 43%);
+    --preset-bright-yellow: hsl(71, 73%, 54%);
+    --preset-light-gray: hsl(204, 43%, 93%);
+    --preset-grayish-blue: hsl(218, 22%, 67%);
+}
+
+*,
+::before,
+::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    min-width: 34rem;
+    /* height: 100vh; */
+
+    font-size: 1.4rem;
+    font-weight: 200;
+    line-height: 2.6rem;
+    letter-spacing: -0.0175rem;
+    color: var(--preset-grayish-blue);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow-x: hidden;
+
+    background-color: var(--preset-light-gray   );
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.container {
+    width: calc(29.48rem + 5vw);
+    height: 72.2rem;
+    margin-top: 7.2rem;
+    display: grid;
+    grid-template-rows: 26.7rem auto;
+    grid-template-areas: 
+        "part1"
+        "inner-grid";
+}
+
+@media only screen and (min-width: 75rem) {
+    body {
+        height: 100vh;
+        justify-content: space-between;
+        
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+        letter-spacing: -0.02rem;
+        
+    }
+
+    .container{
+        width: 63.5rem;
+        height: 47.5rem;
+        grid-template-rows: 21.6rem 25.9rem;
+    }
+    
+}
+
+/* ===== grid management ===== */
+.box {
+    padding: 2.5rem 3rem;
+}
+
+.part1 {
+    grid-area: part1;
+    background-color: white;
+}
+
+.inner-grid{
+    grid-area: inner-grid;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: 
+        "part2"
+        "part3";
+}
+
+.part2 {
+    grid-area: part2;
+    background-color: var(--preset-cyan);
+}
+
+.part3 {
+    grid-area: part3;
+    background-color: hsl(179, 62%, 43%, 0.75);
+}
+
+@media only screen and (min-width: 75rem) {
+    .box {
+        padding: 4.5rem 4.5rem 0 4.5rem;
+    }
+
+    .inner-grid{
+        grid-area: inner-grid;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 
+        "part2 part3"
+        "part2 part3";
+    }
+    
+}
+/* ===== font stylings =====*/
+.white {
+    color: white;
+}
+
+.cyan {
+    color: var(--preset-cyan);
+}
+
+.yellow {
+    color: var(--preset-bright-yellow)
+}
+
+.title {
+    font-size: 2rem;
+    line-height: 2.3rem;
+    letter-spacing: -0.025rem;
+}
+
+.sec-title{
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    letter-spacing: -0.0225rem;
+}
+
+.testimonial{
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    letter-spacing: -0.0188rem;
+    padding: 2rem 0 1.5rem;
+}
+
+.price-declaration {
+    padding: 1.2rem 0 0;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.price {
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: 3.7rem;
+    letter-spacing: -0.04rem;
+}
+
+ul {
+    padding-top: 2rem;
+    list-style-type: none;
+}
+
+li{
+    height: 2rem;
+}
+
+@media only screen and (min-width: 75rem) {
+    .title {
+        font-size: 2.4rem;
+        line-height: 2.8rem;
+        letter-spacing: -0.03rem;
+    }
+
+    .testimonial{
+        font-size: 1.8rem;
+        line-height: 2.1rem;
+        letter-spacing: -0.0225rem;
+        padding: 2rem 0 1.5rem;
+    }
+
+    .price-declaration {
+        padding: 1.2rem 0 0.5rem;
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    ul {
+        padding-top: 1.5rem;
+    }
+}
+/* ===== button ===== */
+
+.btn {
+    width: calc(29.48rem + 5vw - 6rem);
+    height: 4.8rem;
+    margin: 2rem 0;
+
+    outline: none;
+    background-color: var(--preset-bright-yellow);
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
+   
+    font-weight: 700;
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 75rem) {
+    .btn {
+        width: calc(31.8rem - 9rem);
+    }
+}
+/* ===== attribution ===== */
+
+.attribution {
+    padding: 3rem 0 1rem 0;
+    font-weight: 400;
+}
+.attribution-link {
+    color: var(--preset-cyan);
+    font-weight: 700;
+}
