@@ -52,6 +52,9 @@ body {
     width: calc(29.48rem + 5vw);
     height: 72.2rem;
     margin-top: 7.2rem;
+    border-radius: 0.8rem;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 3rem 0 #0050ab25;
     display: grid;
     grid-template-rows: 26.7rem auto;
     grid-template-areas: 
