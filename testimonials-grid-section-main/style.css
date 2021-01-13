@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+:root {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+
+    /* -- font sizes -- */
+    --large-font-size: 2rem;
+    --medium-font-size: 1.3rem;
+    --small-font-size: 1.1rem;
+
+    /* -- color pallet -- */
+    --moderate-violet: hsl(263, 55%, 52%);
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+    --light-gray: hsl(0, 0%, 81%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+*,
+::before,
+::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    min-width: 34rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-between; */
+    overflow-x: hidden;
+
+    background-color: var(--light-grayish-blue);
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.container{
+    padding: 7.1rem calc(1.276rem + 3vw);
+    display: grid;
+    
+    padding-top: 7.1rem;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "daniel"
+        "jonathan"
+        "jeanette"
+        "patrick"
+        "kira";
+    gap: 2.4rem 2.4rem;
+
+}
+
+@media only screen and (min-width: 75rem) {
+    body {
+        min-height: 70rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        padding: 0;
+        width: 111rem;
+        height: 57.2rem;
+        grid-template-columns: repeat(4, 25.5rem);
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+            "daniel daniel jonathan kira"
+            "jeanette patrick patrick kira";
+        justify-items: stretch;
+        align-items: stretch;
+    }
+}
+/* ===== text settings ===== */
+.summary {
+    font-size: var(--large-font-size);
+    line-height: 2.4rem;
+    padding: 1.7rem 1rem 1.6rem 0;
+}
+
+.content {
+    font-size: var(--medium-font-size);
+    line-height: 1.8rem;
+    opacity: 0.7;
+}
+
+/* ===== card color settings & content positioning ===== */
+
+.card {
+    border-radius: 0.8rem;
+    padding: 3.2rem;
+    box-shadow: 4rem 6rem 5rem -4.7rem rgba(72, 85, 106, 0.25);
+}
+
+.daniel, 
+.jonathan, 
+.patrick {
+    color: white;
+}
+
+.jeanette,
+.kira{
+    color: var(--very-dark-grayish-blue);
+}
+
+.daniel {
+    grid-area: daniel;
+    background-color: var(--moderate-violet);
+    background-image: url(./images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: 90% 0%;
+}
+
+.jonathan {
+    grid-area: jonathan;
+    background-color: var(--very-dark-grayish-blue);
+}
+
+.jeanette, .kira {
+    background-color: var(--white);
+}
+
+.patrick {
+    grid-area: patrick;
+    background-color: var(--very-dark-blackish-blue);
+}
+
+.jeanette {
+    grid-area: jeanette;
+}
+
+.kira {
+    grid-area: kira;
+}
+
+/* -- name card -- */
+.image-wrapper{
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 2.8rem;
+    overflow: hidden;
+    float: left;
+}
+
+.image{
+    width:100%;
+}
+
+.daniel .image-wrapper{
+    border: solid 0.2rem #A775F1;
+}
+
+.patrick .image-wrapper{
+    border: solid 0.2rem #733fc8;
+}
+
+.name {
+    padding-left: 4.5rem;
+    font-size: var(--medium-font-size);
+    line-height: var(--medium-font-size);
+}
+
+.position {
+    padding: 0.5rem 0 0 4.5rem;
+    font-size: var(--small-font-size);
+    line-height: var(--small-font-size);
+    opacity: 0.5;
+    font-weight: 500;
+}
+
+
+/* ==== attribution ==== */
+
+.attribution {
+    margin: 2rem 0 0 2rem;
+    color: var(--very-dark-blackish-blue);
+}
+
+.attribution-link {
+    color: var(--moderate-violet);
+}
