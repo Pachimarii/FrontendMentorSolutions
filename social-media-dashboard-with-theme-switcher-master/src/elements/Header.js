@@ -15,7 +15,7 @@ const Header = ({toggle}) => {
                 type="checkbox"
                 className="switch-btn"
                 id="btn"
-                onClick={() => toggle()}                
+                onClick={() => toggle()}  
             />
         </div>
     </StyledHeader>
