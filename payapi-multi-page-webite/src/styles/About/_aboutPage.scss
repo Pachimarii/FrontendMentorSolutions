@@ -1,0 +1,183 @@
+.about {
+    &-header {
+        margin: 75px 0;
+        padding: 0 8rem;
+
+        &-title {
+            font-weight: 500;
+            font-size: 5.6rem;
+            line-height: 5.6rem;
+            letter-spacing: -0.043rem;
+            width: 70%;
+            margin-bottom: 7.5rem;
+        }
+
+        @include rwd(1300) {
+            
+            &-title {
+                text-align: center;
+                width: 80%;
+                margin: 0 auto 6.5rem;
+                font-size: 4.8rem;
+                line-height: 5.6rem;
+                letter-spacing: -0.037rem;
+            }
+        }
+
+        @include rwd(800) {
+            padding: 0;
+            &-title {
+                width: 90%;
+            }
+        }
+
+        @include rwd(700) {
+            &-title {
+                width: 100%;
+                font-size: 3.2rem;
+                line-height: 3.6rem;
+                letter-spacing: -0.025rem;
+            }
+        }
+    }
+
+    &-company-card {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+        &:last-of-type { margin-bottom: 0 }
+
+        &-header {
+            flex: 0 0 20%;
+            font-weight: 500;
+            font-size: 3.2rem;
+            line-height: 4rem;
+            letter-spacing: -0.025rem;
+        }
+
+        &-container {
+            flex: 0 0 70%;
+            font-size: 1.5rem;
+            line-height: 2.8rem;
+        }
+
+        @include rwd(700) {
+            flex-direction: column;
+            text-align: center;
+
+            &-heading { margin-bottom: 15px }
+        }
+
+        @include rwd(700) {
+            &-header {
+                font-size: 2.4rem;
+                line-height: 3.2rem;
+                letter-spacing: -0.018rem;
+                padding: 0 0 2rem;
+            }
+        }   
+    }
+
+    &-img-container {
+        position: relative;
+        display: flex;
+        width: calc(100% + 18vw);
+        left: -9vw;
+
+        .img {
+            width: 100%;
+            max-width: 100%;
+            object-fit: cover;
+
+            &-mobile { display: none }
+        }
+
+        &::before {
+            content: url(../../images/shared/desktop/bg-pattern-circle.svg);
+            position: absolute;
+            transform: translateX(calc(-95% + 15vw)) translateY(calc(-25% + 1vh));
+            z-index: -1;
+        }
+
+        @include rwd(550) {
+            .img {
+                &-desktop { display: none }
+                &-mobile { display: block }
+            }
+        }
+    }
+
+    &-metadata-list {
+        display: flex;
+        justify-content: space-between;
+        margin: 75px 0;
+
+        &-item {
+            display: flex;
+            flex-direction: column;
+            width: calc(95% / 3);
+            padding: 20px 0;
+            border-top: 1px solid rgba(get-color(light-san-juan-blue), .1);
+            border-bottom: 1px solid rgba(get-color(light-san-juan-blue), .1);
+
+            small { font-weight: 400 }
+
+            .metadata-name {
+                font-size: 1.6rem;
+                line-height: 2.8rem;
+                
+            }
+            .number {
+                font-family: 'DM Serif Display', serif;
+                font-size: 5.6rem;
+                line-height: 7.2rem;
+                letter-spacing: -0.043rem;
+                color: get-color(dark-pink);
+                margin-top: 10px;
+                letter-spacing: 2px;
+            }
+        }
+
+        @include rwd(600) {
+            flex-direction: column;
+            align-items: center;
+            border-top: 1px solid rgba(get-color(light-san-juan-blue), .5);
+            border-bottom: 1px solid rgba(get-color(light-san-juan-blue), .5);
+            padding: 15px 0;
+
+            &-item {
+                text-align: center;
+                width: 100%;
+                border-top: 0;
+                border-bottom: 0;
+                padding: 15px 0;
+            }
+        }
+    }
+
+    &-bottom-card-container {
+        padding: 0 75px;
+    }
+
+    @include rwd(1070) {
+        &-header, &-bottom-card-container {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        &-header-heading {
+            max-width: 100%;
+            text-align: center;
+        }
+
+        &-img-container::before {
+            display: none;
+        }
+
+        &-metadata-list {
+            position: relative;
+            left: -5vw;
+            width: calc(100% + 10vw);
+        }
+    }
+}

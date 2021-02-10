@@ -1,0 +1,180 @@
+.home-main-content {
+    margin: 12rem 0 3rem;
+
+    @include rwd(1000) {
+        margin-top: 10rem;
+    }
+}
+
+.app-attribute {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all ease-in-out 0.3s;
+
+    &-text {
+        transition: all ease-in-out 0.3s;
+        flex: 0 0 45%;
+        max-width: 550px;
+        margin-bottom: 5rem;
+
+        &-header { 
+            transition: all ease-in-out 0.3s;
+            font-size: 4.8rem;
+            font-weight: 500;
+            margin-bottom: 25px;
+        }
+
+        &-content {
+            transition: all ease-in-out 0.3s;
+            font-size: 1.5rem;
+            line-height: 2.8rem;
+        }
+    }
+
+    &-img-container {
+        transition: all ease-in-out 0.3s;
+        width: 44.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 45%; 
+        
+        .attr-img-1, .attr-img-2 {
+            width: 100%;
+            box-shadow: 2.5rem 2.5rem 8rem 0 rgba(get-color(san-juan-blue), 0.3);
+        }
+
+    }
+
+    &:nth-of-type(1) {
+        flex-direction: row-reverse;
+        margin-bottom: 100px;
+    }
+
+    &:nth-of-type(2) {
+        position: relative;
+        
+        &::before {
+            content: url(../../images/shared/desktop/bg-pattern-circle.svg);
+            position: absolute;
+            right: -9vw;
+            transform: translateX(50%);
+            z-index: -1;
+
+            @include rwd(1100) { display: none }
+        }
+
+        
+    }
+
+    &-grid {
+        transition: all ease-in-out 0.3s;
+        display: flex;
+        justify-content: space-between;
+        margin: 150px 0 25px;
+
+        .grid-card {
+            transition: all ease-in-out 0.3s;
+            width: calc(92% / 3);
+            text-align: center;
+
+            &-header { 
+                transition: all ease-in-out 0.3s;
+                font-size: 1.8rem;
+                margin: 15px 0;
+             }
+
+            &-content { 
+                transition: all ease-in-out 0.3s;
+                font-size: 1.5rem;
+                font-weight: 400;
+            }
+
+            &-icon-container {
+                transition: all ease-in-out 0.3s;
+            }
+        }
+
+        @include rwd(850) {
+            position: relative;
+            flex-direction: column;
+            margin: 80px 0 0;
+
+            .grid-card {
+                display: flex;
+                text-align: left;
+                width: 100%;
+                margin-bottom: 50px;
+                &:last-of-type { margin-bottom: 0 }
+
+                &-header { margin-top: 0 }
+
+                &-icon-container {
+                    align-self: center;
+                    margin-right: 50px;
+                }
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 10px; height: 84%;
+                top: 8%; left: calc(53px - 5px);
+                background-color: rgba(get-color(dark-pink), .5);
+                z-index: -1;
+            }
+        }
+
+        @include rwd(600) {
+            &::before { display: none }
+
+            .grid-card {
+                flex-direction: column;
+                text-align: center;
+                margin-bottom: 80px;
+
+                &-header { margin-top: 15px }
+
+                &-icon-container { margin-right: 0 }
+            }
+        }
+    }
+
+    @include rwd(900) {
+        flex-direction: column-reverse;
+        height: fit-content;
+        
+        &-img-container {
+            width: 100%;
+            max-width: 50rem;
+            margin-bottom: 5rem;
+        }
+
+        &-text {
+            width: inherit;
+            max-width: inherit;
+        }
+        
+        &:nth-of-type(1) { 
+            flex-direction: column-reverse;
+            margin-bottom: 50px;
+
+            .app-attribute-text {
+                text-align: center;
+            }
+        }
+
+        &:nth-of-type(2) {
+            .app-attribute-text {
+                text-align: center;
+            }
+        }
+    }
+
+    @include rwd(500) {
+        &-text-header {
+            font-size: calc(0.096 * 100vw);
+        }
+    }
+}

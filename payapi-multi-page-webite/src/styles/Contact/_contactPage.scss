@@ -1,0 +1,176 @@
+.contact {
+    &-header {
+        margin-bottom: 75px;
+        font-weight: 500;
+        width: 60%;
+        font-size: 5.6rem;
+        line-height: 5.6rem;
+
+        @include rwd(1215) { max-width: 90% }
+    }
+
+    &-form {
+        flex: 0 0 35%;
+
+        &-control {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+
+            input, textarea {
+                font-family: inherit;
+                border: 0;
+                border-bottom: 1px solid rgba(get-color(light-san-juan-blue), .65);
+                padding: 20px 0 20px 25px;
+                background-color: #ecf4fc;
+                &::placeholder { opacity: .75 }
+
+                &:focus-within {
+                    border-bottom: 1px solid get-color(mirage-blue);
+                }
+            }
+
+            textarea {
+                resize: vertical;
+                min-height: 80px;
+                max-height: 200px;
+                padding-right: 25px;
+                line-height: 1.50;
+            }
+
+            .error-msg {
+                display: none;
+                color: red;
+                opacity: .75;
+                font-weight: 400;
+                font-size: .75em;
+                margin: 3px 0 3px 25px;
+            }
+
+            &:last-of-type {
+                border-bottom: 0;
+                padding-left: 0;
+                margin: 20px 0 30px;
+                flex-direction: row;
+
+                .checkbox {
+                    display: flex;
+                    align-self: center;
+                    height: 15px; width: 15px;
+                    margin-right: 15px;
+                    border-radius: 2px;
+                    background-color: rgba(get-color(light-san-juan-blue), .4);
+                    cursor: pointer;
+
+                    i { display: none }
+
+                    &.checked {
+                        background-color: get-color(dark-pink);
+
+                        i { 
+                            display: flex; 
+                            color: white;
+                            font-size: 11px;
+                            margin: auto;
+                        }
+                    }
+                }
+
+                .email-list {
+                    line-height: 1.25;
+                    font-weight: 400;
+                    font-size: .90em;
+                    cursor: pointer;
+                }
+            }
+
+            &.invalid {
+                input, textarea {
+                    border-bottom: 1px solid red;
+                    color: rgba(red, .5);
+                    &::placeholder {
+                        color: rgba(red, .5)
+                    }
+                }
+                .error-msg { display: flex }
+            }
+        }
+    }
+
+    &-investors-grid {
+        flex: 0 0 52%;
+        align-self: center;
+
+        &-header {
+            width: 75%;
+            font-weight: 500;
+            font-size: 2.4rem;
+            margin-bottom: 30px;
+        }
+
+        @include rwd(1490) {
+            &-header {
+                margin-bottom: 50px;
+            }
+            .partners-grid {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+            }
+        }
+    }
+
+    @include rwd(950) {
+        &-header {
+            width: 70%;
+            margin: auto;
+            text-align: center;
+            font-size: 4.8rem;
+            line-height: 5.6rem;
+            letter-spacing: -0.037rem;
+        }
+
+        &-form {
+            max-width: 550px;
+            margin: 4rem auto 50px;
+        }
+
+        &-investors-grid {
+            margin: 3.5rem 0;
+
+            &-header {
+                margin: 0 auto 5rem;
+                text-align: center;
+            }
+
+            .partners-grid {
+                grid-template-columns: repeat(3, 1fr) !important;
+                grid-template-rows: repeat(2, 1fr) !important;
+            }
+        }
+    }
+
+    @include rwd(560) {
+        &-header {
+            width: 100%;
+            margin: auto;
+            text-align: center;
+            font-size: 3.2rem;
+            line-height: 3.6rem;
+            letter-spacing: -0.025rem;
+        }
+
+        &-investors-grid .partners-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+            grid-template-rows: repeat(3, 1fr) !important;
+        }
+    }
+}
+
+.contact-main {
+    display: flex;
+    justify-content: space-between;
+
+    @include rwd(950) {
+        flex-direction: column;
+    }
+}

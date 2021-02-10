@@ -1,0 +1,41 @@
+.demo-form {
+    width: 100%;
+    min-width: 38rem;
+    position: relative;
+    display: flex;
+    height: 5rem;
+    margin: 4rem 0 1.5rem;
+
+    input {
+        transition: all ease-in-out 0.1s;
+        border-radius: 5rem;
+        border: 0;
+        font-family: inherit;
+        font-weight: 700;
+        min-width: 15rem;
+        width: 100%; height: 100%;
+        padding: 0 35% 0 3rem;
+        box-shadow: 0.1rem 0.2rem 1rem 0.1rem rgba(get-color(san-juan-blue), .25);
+        &::placeholder { opacity: .65 }
+    }
+
+    .btn {
+        font-weight: 700;
+        display: flex;
+        position: absolute;
+        align-items: center;
+        right: 0;
+        height: 100%;
+    }
+
+
+    @include rwd(768) {
+        min-width: 23rem;
+        margin: 4rem auto 1.5rem;
+
+        input {
+            width: calc(100% - 3rem);
+            padding: 0 0 0 3rem;
+        }
+    }
+}

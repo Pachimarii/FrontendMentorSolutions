@@ -1,0 +1,32 @@
+.page-container {
+    position: relative;
+
+    @include rwd(1000) {
+        &:not(.home-page-container)::before {
+            transform: translateX(55%) translateY(-90%);
+        }
+    }
+
+    @include rwd(768) {
+
+        .home-page-container {
+            width: calc(100% + 4vw);
+            left: -2vw;
+
+            &::before { display: none }
+
+            &::after {
+                content: url(../../images/shared/desktop/bg-pattern-circle.svg);
+                position: fixed;
+                width: 78rem; height: 78rem;
+                top: calc( 0.5 * 78rem ); left: 50%;
+                transform: translateX(-50%) translateY(-50%);
+                z-index: -1;
+            }
+        }
+    }
+
+    @include rwd(715) {
+        margin-top: -4rem;
+    }
+}

@@ -1,0 +1,80 @@
+:root {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+body {
+    max-width: 190rem;
+    min-width: 28rem;
+    overflow-x: hidden;
+    background-color: #ecf4fc;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome, Edge, Opera and Firefox */
+
+    & > * {
+        padding: 0 9vw;
+    }
+}
+
+
+button {
+    background-color: transparent;
+}
+
+@mixin rwd($screen) {
+    @media (max-width: $screen+'px') {
+        @content;
+    }
+}
+
+.bg-wrapper {
+    margin-left: -9vw;
+    width: 82vw;
+    padding: 0 9vw;
+    background: url('../images/shared/desktop/bg-pattern-circle.svg');
+    background-repeat: no-repeat;
+    // transition: all ease-in-out 0.1s;
+
+    &-home {
+        background-position: 60vw -23rem;
+    }
+
+    &-other {
+        background-position: 68vw -55rem;
+    }
+
+    @include rwd(780) {
+        &-home {
+            background-position: center -50rem;
+        }
+    
+        &-other {
+            background-position: 63vw -47rem;
+        }
+    }
+
+    @include rwd(500) {
+        &-home {
+            background-position: center -56rem;
+        }
+    
+        &-other {
+            background-position: 20vw -65rem;
+        }
+    }   
+}

@@ -1,0 +1,51 @@
+.cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 75px 0;
+
+    &-heading {
+        font-weight: 500;
+        font-size: calc(1.7em + 2vw);
+    }
+
+
+    .form-wrapper {
+        width: 35%;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    @include rwd(1000) {
+        flex-direction: column;
+
+        .form-wrapper {
+            width: 80%;
+        }
+
+        .demo-form {
+            width: 100%;
+            max-width: 650px;
+        }
+    }
+
+    @include rwd(550) {
+
+        .form-wrapper {
+            width: 100%;
+        }
+
+        .demo-form {
+            flex-direction: column;
+            justify-content: space-between;
+            height: 120px;
+
+            input, .btn { height: 50px }
+
+            .btn {
+                position: relative;
+                justify-content: center;
+            }
+        }
+    }
+}

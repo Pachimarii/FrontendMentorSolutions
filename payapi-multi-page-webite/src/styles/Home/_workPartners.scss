@@ -1,0 +1,91 @@
+.work-partners {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    color: white;
+    width: 100%;
+    left: -9vw;
+    padding: 100px 9vw;
+    overflow: hidden;
+    background: url(../../images//shared/desktop/bg-pattern-circle.svg), get-color(mirage-blue);
+    background-repeat: no-repeat;
+    background-position: calc(0.35 * -78rem) calc( 0.45 * -78rem);
+    transition: all ease-in-out 0.3s;
+    
+
+    &-text {
+        flex: 0 0 36%;
+        padding: 0 3rem 0 0;
+
+        &-header { 
+            font-size: 4.8rem;
+            font-weight: 500; 
+        }
+
+        &-content { 
+            color: get-color(link-water-white);
+            font-size: 1.5rem;
+            font-weight: 300;
+            line-height: 2.8rem;
+            padding: 30px 0 50px 
+        }
+
+        .btn {
+            position: relative;
+            z-index: 2;
+        }
+    }
+
+    &-grid { flex: 0 0 55% }
+
+    @include rwd(1343) {
+        &-text { flex: 0 0 45% }
+
+        &-grid {
+            flex: 0 0 43%;
+            grid-template-columns: repeat(2, 1fr) !important;
+            grid-template-rows: repeat(3, 1fr) !important;
+        }
+    }
+
+    @include rwd(1090) {
+        background-position: center calc( 0.70 * -78rem);
+        flex-direction: column-reverse;
+
+        &-text {
+            text-align: center;
+            align-self: center;
+            max-width: 600px;
+            margin-top: 60px;
+
+            &-content {
+                padding: 15px 0 25px;
+            }
+        }
+
+        &-grid {
+            grid-template-columns: repeat(3, 1fr) !important;
+            grid-template-rows: repeat(2, 1fr) !important;
+        }
+
+    }
+
+    @include rwd(550) {
+        &-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+            grid-template-rows: repeat(3, 1fr) !important;
+        }
+
+        &-text {
+            &-header {
+                font-size: calc(0.096 * 100vw);
+            }
+
+            &-content {
+                font-size: calc( 0.04 * 100vw);
+                line-height: calc(0.075 * 100vw);
+            }
+
+        }
+    }
+}

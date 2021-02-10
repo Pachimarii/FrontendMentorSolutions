@@ -1,0 +1,118 @@
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6rem;
+
+    .hero-text-form-wrapper {
+        width: 74%;
+    }
+
+    &-text {
+        flex: 0 0 50%;
+        padding: 0 2vw 0 0;
+
+        &-header {
+            font-size: calc(0.05 * 100vw);
+            font-weight: 500;
+        }
+
+        &-contact { 
+            padding-left: 3rem;
+            color: rgba(get-color(light-san-juan-blue), 0.8); 
+            display: flex;
+
+            a {
+                font-weight: 700;
+                margin-left: 1rem;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &-img-wrapper {
+        position: relative;
+        transition: all ease-in-out 0.5s;
+        width: 26.3rem;
+        margin-right: calc(6vw);
+    }
+
+    &-img {
+        transition: all ease-in-out 0.5s;
+        width: 100%;
+        height: 100%;
+        box-shadow: 2.5rem 2.5rem 8rem 0 rgba(get-color(san-juan-blue), 0.25);
+    }
+
+    @include rwd(1040) {
+        .hero-text-form-wrapper {
+            width: 50%;
+        }
+    }
+
+    @include rwd(900) {
+
+        .hero-text-form-wrapper {
+            margin: auto;
+            width: 95%;
+        }
+
+        &-text-header {
+            font-size: calc(0.07 * 100vw);
+        }
+
+        &-text-from-wrapper {
+            width: 75%;
+        }
+
+        &-img-wrapper {
+            margin: 0;
+
+        }
+
+        
+    }
+
+    @include rwd(768) {
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-bottom: 10rem;
+
+        &-text {
+            text-align: center;
+            margin-top: 2rem;
+
+            &-header {
+                font-size: calc(0.096 * 100vw);
+            }
+
+            &-contact {
+                justify-content: center;
+                margin-top: 1.5rem;
+            }
+        }
+
+        &-img-wrapper {
+            
+            width: calc(9.989rem + 8vw);
+            img {
+                
+                width: 100%;
+            }
+        }
+
+        .demo-form {
+            flex-direction: column;
+            justify-content: space-between;
+            height: 10rem;
+
+            input, .btn { height: 4.2rem }
+
+            .btn {
+                position: relative;
+                justify-content: center;
+                font-size: 1.3rem;
+            }
+        }
+    }
+}
