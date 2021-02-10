@@ -10,13 +10,13 @@ const Footer = () => (
         </Link>
         <PageLinks type="footer"/>
         <div className="footer-socials">
-            <a href="#" aria-label="Facebook">
+            <a href="/" aria-label="Facebook">
                 <i className="fab fa-facebook-square" />
             </a>
-            <a href="#" aria-label="Twitter">
+            <a href="/" aria-label="Twitter">
                 <i className="fab fa-twitter" />
             </a>
-            <a href="#" aria-label="LinkedIn">
+            <a href="/" aria-label="LinkedIn">
                 <i className="fab fa-linkedin" />
             </a>
         </div>

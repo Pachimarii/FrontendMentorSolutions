@@ -4,7 +4,6 @@ import { PageLinks, Button } from '../';
 import logo from '../../images/shared/desktop/logo.svg';
 import open from '../../images/shared/mobile/menu.svg'
 import close from '../../images/shared/mobile/close.svg';
-import bg from '../../images/shared/desktop/bg-pattern-circle.svg';
 
 const Navbar = ({ changePage }) => {
     const [navDeployed, setNavDeployed] = useState(false);
@@ -12,7 +11,7 @@ const Navbar = ({ changePage }) => {
 
     useEffect(() => {
         handleMobileNavClose();
-    }, [])
+    })
 
     const handleNavOpen = () => {
         navBtn.current.classList.add('change');
@@ -58,7 +57,7 @@ const Navbar = ({ changePage }) => {
                 <Button text="Schedule a Demo" href="/contact" color="pink" />
             </div>
             <a 
-                href="#"
+                href="/"
                 ref={navBtn}
                 className="navbar-links-mobile-btn" 
                 aria-label="Button for mobile menu deployment" 
